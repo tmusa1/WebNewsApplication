@@ -6,14 +6,14 @@
 }
 
 <div class="container">
-    <div class="jumbotron">
-        @Model.News.Title
+    <div class="jumbotron" style="background-color: cornsilk">
+        <h1 style="color:black">@Model.News.Title</h1>
         <hr />
         @switch (Model.News.Type)
         {
             case "1":
                 <span>
-                    <label class="font-weight-bold" style="color:maroon;">General</label>
+                    <h3 class="font-weight-bold" style="color: darkblue; float:right">General</h3>
                 </span>
                 break;
         }
@@ -21,9 +21,9 @@
 
 
     <img src="~/images/@Model.News.Image" width="99%" height="500px" style="border-radius:5px; border:1px solid #bbb9b9" />
-    <div class="jumbotron jumbotron-fluid">
+    <div class="jumbotron jumbotron-fluid" style="background-color: cornsilk">
         <div class="container">
-            <h1 class="display-4">@Model.News.Title</h1>
+            <h3 class="display-4" style="text-decoration:underline">@Model.News.Title</h3>
             <p class="lead pl-4 pr-4">@Model.News.Description</p>
         </div>
     </div>
